@@ -1,0 +1,182 @@
+%-------------------------
+% Resume in Latex
+% Author : Shubhi Rani
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10.8pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-3pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {\vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\LARGE Shubhi Rani}} & Email : \href{mailto:shubhi2808@gmail.com}{shubhi2808@gmail.com}\\
+  \href{https://www.linkedin.com/in/shubhir/}{Linkedin: https://www.linkedin.com/in/shubhir/} & Mobile : +1-631-645-8315 \\
+  \href{https://github.com/shubhi28}{Github: https://github.com/shubhi28} \\
+\end{tabular*}
+
+%
+%--------PROGRAMMING SKILLS------------
+\section{Skills Summary}
+	\resumeSubHeadingListStart
+	\resumeSubItem{Languages}{Java, Python, C++, C, SQL, Unix scripting}
+	\resumeSubItem{Tools/Framework}{Kubernetes, Docker, Elasticsearch, Prometheus, Google Protocol RPC, Google Protobufs, NATs, REST API, Akka HTTP, GIT, NGINX, SpringBoot }
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Stony Brook University}{Stony Brook, NY}
+      {Masters in Computer Science;  GPA: 3.54}{Aug 2015 - Dec 2016}
+      
+	   {\scriptsize \textit{Courses: Operating Systems, Analysis Of Algorithms, Artificial Intelligence, Machine Learning, Probability and Statistics, and Network Security.}}
+	    
+    \resumeSubheading
+      {Birla Institute of Technology}{Mesra, India}
+      {Bachelor of Computer Science;  GPA: 3.9 (8.54/10.0 - First in class of 60)}{Aug 2008 - May 2012}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+    {VMware}{Palo Alto, CA}
+    {Member Of Technical Staff III}{July 2019 -  Current}
+    \resumeItemListStart
+          \resumeItem{Real-Time Notifications Framework}
+          {Designed and implemented a framework to provide a unified communication mechanism for propagating state change progress and updates from back-end services to the UI in real-time using Akka Actors, Stomp Protocol, and NATs pub-sub mechanism.}
+          \resumeItem{Telemetry pipeline}
+          {Smart Fabric Director is a logically centralized software controller to manage a distributed physical network fabric or a physical network underlay. Developed the pipeline to periodically receive telemetry data from all the network objects managed by SFD using gRPC calls and save metrics in a time-series format using Prometheus. Optimized the solution, in terms of memory usage, concurrency, and scaling to handle large scale deployments, by 400\%}
+          \resumeItem{Events and Alert Manager}
+          {Created a library which is used by various services to detect state changes, generate events, and raise alerts for SFD managed objects. Exposed REST APIs to retrieve alerts and events with filtering and sorting capabilities.}
+          \resumeItem{Backup and Restore}
+          {Built APIs to restore all the persistent data in the event of a disaster.
+           Exposed REST endpoints to manage, schedule, delete and view backup jobs, and restore backup contents from a remote server.}
+          \resumeItem{Mentoring and Interviewing}
+          {Mentored 3 new hires and helped them become core contributors. Actively involved in interviewing new as well as experienced candidates for the team.}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+    {VMware}{Palo Alto, CA}
+    {Member Of Technical Staff }{Feb 2017 -  July 2019}
+    \resumeItemListStart
+          \resumeItem{Upgrade SFD}
+          {Designed and developed an over-the-air and air-gapped upgrade mechanism that is used to upgrade the single node in a Smart Fabric Director cluster.}
+          \resumeItem{Health Monitoring System}{Implemented a monitoring service that is responsible for monitoring the health of all the micro-services running inside the SFD cluster.}
+          \resumeItem{CLI framework}{Developed an internal extensible command-line interface tool that provides a set of commands specific to Smart Fabric Director projects to get the system health, logs, and current resource utilization.}
+          \resumeItem{Bootstrap SFD}{Smart Fabric Director is composed of several micro-services deployed on the Kubernetes pods on a single-node cluster. Implemented the bootstrapping mechanism to package all the services and deploy them on the Kubernetes environment.}
+          \resumeItem{Install/Upgrade/Uninstall NSX agent}{Worked on install, upgrade, and uninstall mechanism of NSX agent on workload VMs deployed on NSX cross-cloud environment.}
+          \resumeItem{AppDiscovery}{Worked on application profiling feature which provides visualization and details of which processes inside a workload VM are communicating on the network.}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+		{Stony Brook University}{Stony Brook, NY}
+		{Research Assistant - Prof. Erez Zadok }{May 2016 -  August 2016}
+		\resumeItemListStart
+        \resumeItem{System Call Trace Record/Replay}
+          {Worked on building a trace replayer at system call level to reproduce system call operations that were captured during a specific workload using C, C++, DataSeries. Developed a wrapper class that makes C++ functions callable by strace C code.}
+		\resumeItemListEnd
+
+    \resumeSubheading
+    {Samsung Research Institute}{Noida, India}
+    {Software Developer Engineer}{Jun 2012 - July 2015}
+    \resumeItemListStart
+    \resumeItem{Android File System}{}
+    \begin{description}[font=$\bullet$]
+    \item {Involved in board bring-up activities for Android Smartphones based on Exynos and Broadcom chipsets on Android version 4.3 Jelly Bean to Android 5.0 Lollipop.}
+    \item {Experienced in porting of File System (FAT, EXFAT, SDCARDFS, EXT4) on Samsung mobile’s proprietary platform.}
+    \item {Enhanced performance of smartphones having low RAM by analyzing performance using blktrace and tuning kernel parameters. The code was merged in around 15 smart phones.}
+    \end{description}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Academic Projects}
+\resumeSubHeadingListStart
+\resumeSubItem{Plug board Proxy (Networking)}{Developed a plug board proxy that adds an extra layer of encryption to connections towards TCP services. Clients running on same server connect to pbproxy, which then relays all traffic to actual services. (Mar '16)}
+\resumeSubItem{Asynchronous Work Queue Manager (Kernel Programming)}{Developed a kernel module to serve as an asynchronous work queue manager with configurable worker threads. Implemented netlink sockets to propagate callbacks from kernel to user land and throttling to improve job extraction latency. (Nov '15)}
+\resumeSubItem{Anti-Malware Stackable File System (Kernel Programming)}{Implemented a stackable, anti-malware Linux file system that prevents the existing file system from being corrupted by malware by detecting virus pattern while attempting to open, read and write a file. (Oct '15)}
+\resumeSubItem{File Encryption System Call (Kernel Programming)}{Implemented a system call in Linux kernel, which supports multiple ciphers to encrypt or decrypt an input file.( Sep '15)}
+\resumeSubItem{Peg- Solitaire, Connect Four, Sudoku (Game Development)}{Designed a Peg Solitaire, Connect Four and Sudoku using Iterative Deepening Search, Alpha-beta pruning and Backtracking, MRV and Forward Chaining Artificial Intelligence Algorithms respectively in Python. (Aug '15)}
+\resumeSubHeadingListEnd
+
+%-----------Awards-----------------
+\section{Awards}
+\begin{description}[font=$\bullet$]
+\item {Selected in top 20 female coders in the US for the Code House event organized by VMware in August15 - August17, 2016.}
+\item {Ranked first among batch of 60 students in my Computer Science Engineering Branch.}
+\end{description}
+%-------------------------------------------
+\end{document}
